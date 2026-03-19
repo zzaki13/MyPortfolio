@@ -26,7 +26,8 @@ function AcademicProjects() {
         "Idle game lifecycle with automatic pause/resume",
         "No port forwarding required via Cloudflare",
         "Frontend built with Vite and modern JavaScript"
-      ]
+      ],
+      github: "https://ftl.muhahomelab.com/"
     },
     {
       id: 2,
@@ -207,7 +208,11 @@ function AcademicProjects() {
                     rel="noopener noreferrer"
                     className="github-link"
                   >
-                    {selectedProject.github.includes('gitlab') ? 'View on GitLab →' : 'View on GitHub →'}
+                    {selectedProject.github.includes('gitlab') 
+                      ? 'View on GitLab →' 
+                      : selectedProject.github.includes('muhahomelab') 
+                      ? 'Play Game →' 
+                      : 'View on GitHub →'}
                   </a>
                 </div>
               )}
