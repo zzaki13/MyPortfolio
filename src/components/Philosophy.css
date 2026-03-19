@@ -1,0 +1,237 @@
+.philosophy {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.philosophy-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quote-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.main-quote {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--bg-white);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.main-quote::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--accent-color);
+  opacity: 0.3;
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.main-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.philosophy-text {
+  background-color: var(--bg-white);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.philosophy-text h3 {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.philosophy-text > p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.belief-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.belief-card {
+  background-color: var(--bg-light);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.belief-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.belief-card h4 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.belief-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.journey-section {
+  margin-bottom: 3rem;
+}
+
+.journey-section h3 {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.4rem;
+  top: 0.5rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--bg-white);
+  box-shadow: 0 0 0 3px var(--primary-color);
+}
+
+.timeline-marker.past {
+  background-color: var(--primary-color);
+}
+
+.timeline-marker.present {
+  background-color: #fbbf24;
+  box-shadow: 0 0 0 3px #fbbf24;
+  animation: pulse 2s infinite;
+}
+
+.timeline-marker.future {
+  background-color: #10b981;
+  box-shadow: 0 0 0 3px #10b981;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.timeline-content {
+  background-color: var(--bg-light);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.timeline-content h4 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-content p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.closing-statement {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.closing-statement p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .main-quote {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .main-quote::before {
+    font-size: 3rem;
+  }
+
+  .philosophy-text {
+    padding: 2rem 1.5rem;
+  }
+
+  .belief-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 2rem;
+  }
+
+  .timeline-marker {
+    left: -1.65rem;
+  }
+}

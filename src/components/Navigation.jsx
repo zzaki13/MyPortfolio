@@ -58,6 +58,14 @@ function Navigation({ activeSection, setActiveSection }) {
           </li>
           <li>
             <a 
+              onClick={() => scrollToSection('philosophy')}
+              className={activeSection === 'philosophy' ? 'active' : ''}
+            >
+              Philosophy
+            </a>
+          </li>
+          <li>
+            <a 
               onClick={() => scrollToSection('fitquest')}
               className={activeSection === 'fitquest' ? 'active' : ''}
             >
